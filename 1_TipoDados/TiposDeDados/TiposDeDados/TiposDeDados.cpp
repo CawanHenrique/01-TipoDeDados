@@ -59,6 +59,7 @@ int main()
 	int dias = 0;
 	int horas = 0;
 	int minutos = 0;
+	int segundos = 0;
 
 	cout << "Digite seu nome: ";
 	cin >> nome;
@@ -67,9 +68,34 @@ int main()
 	dias = idade * 365;
 	horas = dias * 24;
 	minutos = horas  * 60;
+	segundos = minutos * 60;
 	cout << "Sua idade em dias e: " << dias << endl;
 	cout << "Sua idade em horas e: " << horas << endl;
 	cout << "Sua idade em minutos e: " << minutos << endl;
+	cout << "Sua idade em segundos e: " << segundos << endl;
+
+
+	cout << "\nExercício 1 - Temperatura \n";
+	cout << "==========================\n";
+	double celsius = 0.0F;
+	cout << "Digite a temperatura em Celsius: ";
+	cin >> celsius;
+	double fahrenheit = (celsius * 9 / 5) + 32;
+	cout << "A temperatura em Fahrenheit e: " << fahrenheit << endl;
+	double kelvin = celsius + 273.15;
+	cout << "A temperatura em Kelvin e: " << kelvin << endl;
+
+	cout << "\nExercício 2 - Calculadora de segundos\n";
+	cout << "=====================================\n";
+	long segundos = 0;
+	cout << "Digite a quantidade de segundos: ";
+	cin >> segundos;
+	long dias = segundos / 86400;
+	long horas = segundos / 3600;
+	long minutos = (segundos % 3600) / 60;
+	long segundosRestantes = segundos % 60;
+	cout << "Equivale a: " << dias << " dias, " << horas << " horas, " << minutos << " minutos e " << segundosRestantes << " segundos\n";
+	
 
 	cout << "Qualquer tecla para sair...";
 	system("pause"); // somente no Windows
